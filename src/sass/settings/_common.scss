@@ -1,0 +1,39 @@
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html {
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 100%;
+}
+body {
+    @include font-futura-normal;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #fff;
+    // font-family: 'FuturaMediumC'; 500
+    // font-family: 'FuturaLightC'; 300
+    // font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.btn {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $orange !important;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: solid 2px $orange;
+    cursor: pointer;
+}
