@@ -15,6 +15,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" rel="stylesheet">
 
 	<!-- STYLES -->
+	<link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/backdrop.css" />
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- ПОДКЛЮЧЕНИЕ JQUERY -->
@@ -40,7 +41,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="form-group__label" for="email">Username or e-mail</label>
+			<label class="form-group__label" for="email">Password</label>
 			<div class="input-wrap">
 				<img src="img/icons/lock.svg" alt="" class="input-image">
 				<img src="img/icons/pass-shape.svg" alt="" class="input-pass-image">
@@ -49,14 +50,24 @@
 		</div>
 		<div class="forgot_password">FORGOT PASSWORD?</div>
 		<div class="btn">Login</div>
-		<a class="not_member" href="register.html">Not a member yet?</a>
+		<a class="not_member posr" href="register.html">Not a member yet? 
+			<img class="tooltip" style="right: -20%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+		</a>
 	</div>
 
 
 
 
 
-
+	<script src="https://unpkg.com/popper.js@1"></script>
+	<script src="https://unpkg.com/tippy.js@5"></script>
+	<script>
+	const tooltippy = document.querySelector('.tooltip');
+	const instance = tippy(tooltippy, {
+		placement: 'right'
+	});
+	instance.show();
+	</script>
 	<script src="js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="13.5" cy="2.5" r="2.5"></circle>
+        <filter x="-130.0%" y="-110.0%" width="360.0%" height="360.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.247514205 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Seller-new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="-g-003_Create-account(verified)" transform="translate(-1201.000000, -18.000000)">
+            <g id="Group-8">
+                <g id="Group-2" transform="translate(1201.000000, 21.000000)">
+                    <g id="246688" transform="translate(0.000000, 1.000000)" fill="#FE6B5A" fill-rule="nonzero">
+                        <path d="M16.7492881,12.1490566 C14.7497991,10.149 14.4489129,9.14543555 14.4489129,5.95 C14.4489129,2.66388672 11.7855949,0 8.50005134,0 C5.21450779,0 2.55118981,2.66391992 2.55118981,5.95 C2.55118981,7.67294336 2.50530316,8.31612109 2.26813362,9.10575781 C1.97319074,10.0895 1.36769952,11.0313066 0.250515774,12.1490566 C-0.284684538,12.6845566 0.094428134,13.6 0.85149137,13.6 L5.5681205,13.6 L5.52532174,14.025 C5.52532174,15.6680566 6.85699734,17 8.49975251,17 C10.1425077,17 11.4741833,15.6680566 11.4741833,14.025 L11.4313845,13.6 L16.1483125,13.6 C16.9056745,13.6 17.2847872,12.6845566 16.7492881,12.1490566 Z M8.50031696,16.15 C7.32702002,16.15 6.37561921,15.1982988 6.37561921,14.025 L6.41841796,13.6 L10.5817179,13.6 L10.6250811,14.025 C10.6250811,15.1982988 9.6736139,16.15 8.50031696,16.15 Z M0.851756994,12.75 C3.40118844,10.2 3.40118844,8.5 3.40118844,5.95 C3.40118844,3.13367773 5.68399922,0.85 8.50005134,0.85 C11.3161034,0.85 13.5989142,3.13367773 13.5991799,5.95 C13.5991799,8.5 13.5991799,10.2 16.1486113,12.75 L0.851756994,12.75 Z" id="Shape"></path>
+                    </g>
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#A3EB94" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

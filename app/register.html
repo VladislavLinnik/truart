@@ -15,6 +15,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" rel="stylesheet">
 
 	<!-- STYLES -->
+	<link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/backdrop.css" />
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- ПОДКЛЮЧЕНИЕ JQUERY -->
@@ -55,7 +56,9 @@
 			</div>
 		</div>
 		<div class="forgot_password">FORGOT PASSWORD?</div>
-		<div class="btn js-btnYes">Create account</div>
+		<div class="btn js-btnYes posr">Create account
+			<img class="tooltip" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+		</div>
 		<a class="not_member" href="register.html">Are you a member?</a>
 	</div>
 
@@ -64,7 +67,9 @@
 	<div class="popup">
 		<div class="popup_content">
 			<h2 class="title">Would you like to verify your identity?</h2>
-			<div class="btn js-btnYes2">YES</div>
+			<div class="btn js-btnYes2 posr">YES
+				<img class="tooltip tooltip2" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+			</div>
 			<div class="later">maybe later</div>
 		</div>
 	</div>
@@ -81,25 +86,55 @@
 	</div>
 
 	<div class="popup3">
-		<div class="popup3_content">
+		<div class="popup3_content posr">
+			<img class="tooltip tooltip4" style="right: auto; left: 0;" src="img/icons/circle.svg" data-tippy-content="At this step, a user is redirected to a KYC page. For the purposes of the prototype, we assume that the verification has already been completed. This process can be activated before a new transaction is created. There is no need to be verified before a transaction starts." alt="">
 			<h2 class="title">Please turn the camera on and
 					follow the instructions in the application.</h2>
-			<div class="btn js-btnYes3">Verify me</div>
+			<div class="btn js-btnYes3 posr">Verify me
+				<img class="tooltip tooltip3" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+			</div>
 		</div>
 	</div>
 
 	<div class="popup4">
 		<div class="popup4_content">
 			<h2 class="title">Your identity has been successfully verified.</h2>
-			<a href="account.html" class="btn">Continue</a>
+			<a href="create-account.html" class="btn posr">Continue
+				<img class="tooltip tooltip5" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+			</a>
 		</div>
 	</div>
 
 
+	<script src="https://unpkg.com/popper.js@1"></script>
+	<script src="https://unpkg.com/tippy.js@5"></script>
+	<script>
+		const instance = tippy(document.querySelector('.tooltip'), {
+			placement: 'right'
+		});
+		instance.show();
+
+		const instance2 = tippy(document.querySelector('.tooltip2'), {
+			placement: 'right'
+		});
+
+		const instance3 = tippy(document.querySelector('.tooltip3'), {
+			placement: 'right'
+		});
+
+		const instance4 = tippy(document.querySelector('.tooltip4'), {
+			placement: 'left'
+		});
+
+		const instance5 = tippy(document.querySelector('.tooltip5'), {
+			placement: 'right'
+		});
+	</script>
 	<script>
 	$(function(){
 		$('.js-btnYes').click(function(){
 			$('.popup, .popup_overlay').fadeIn(400);
+			instance2.show();
 		});
 		$('.popup_overlay').click(function(){
 			$('.popup, .popup_overlay').fadeOut(400);
@@ -118,6 +153,8 @@
 
 	$(function(){
 		$('.js-openPopup3').click(function(){
+			instance3.show();
+			instance4.show();
 			$('.popup2').fadeOut(400);
 			$('.popup3, .popup_overlay').fadeIn(400);
 		});
@@ -128,6 +165,7 @@
 
 	$(function(){
 		$('.js-btnYes3').click(function(){
+			instance5.show();
 			$('.popup3').fadeOut(400);
 			$('.popup4, .popup_overlay').fadeIn(400);
 		});
