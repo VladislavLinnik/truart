@@ -1,0 +1,66 @@
+.info {
+
+    &__container {
+        padding: 2.3%;
+        background-color: #fff;
+        color: $black;
+        box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    &__title {
+        margin-bottom: 28px;
+        font-size: 24px;
+        color: #121212;
+    }
+
+    .account {
+
+        &__info {
+            margin-right: 30px;
+            width: 202px;
+        }
+
+        &__avatar {
+
+            .img {
+                display: block;
+            }
+        }
+
+        &__edit {
+            padding: 4% 0;
+            background-color: $orange;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            .img {
+                margin-right: 4px;
+            }
+        }
+
+        &__status {
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $black;
+            font-size: 16px;
+
+            .status {
+                display: flex;
+                align-items: center;
+
+                .img {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        &__form {
+
+        }
+    }
+}

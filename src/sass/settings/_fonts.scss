@@ -1,9 +1,5 @@
-@mixin font-futura-normal {
-	font-family: 'FuturaNormal', sans-serif;
-}
-
-@mixin font-futura-bold {
-	font-family: 'FuturaBold', sans-serif;
+@mixin font-futura {
+	font-family: 'Futura', sans-serif;
 }
 
 @mixin font-raleway {
@@ -11,23 +7,12 @@
 }
 
 @font-face {
-	font-family: 'FuturaBold';
-	src: url('../fontsFuturaDemiC.eot');
-	src: local('Futura Demi Cyrillic'), local('FuturaDemiC'),
-		url('../fonts/FuturaDemiC.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/FuturaDemiC.woff') format('woff'),
-		url('../fonts/FuturaDemiC.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'FuturaNormal';
-	src: url('../fontsFuturaMediumC.eot');
-	src: local('Futura Medium Cyrillic'), local('FuturaMediumC'),
-		url('../fontsFuturaMediumC.eot?#iefix') format('embedded-opentype'),
-		url('../fontsFuturaMediumC.woff') format('woff'),
-		url('../fontsFuturaMediumC.ttf') format('truetype');
-	font-weight: 500;
-	font-style: normal;
+    font-family: 'Futura';
+    src: url('../fonts/FuturaMediumC.eot');
+    src: url('../fonts/FuturaMediumC.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaMediumC.woff2') format('woff2'),
+        url('../fonts/FuturaMediumC.woff') format('woff'),
+        url('../fonts/FuturaMediumC.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
