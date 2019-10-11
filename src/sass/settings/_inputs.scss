@@ -10,3 +10,82 @@
     font-size: 16px;
     border: 1px solid $black;
 }
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: $black;
+  width: 100%;
+  height: 36px;
+}
+.select-styled {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  padding: 8px 15px;
+  border: 1px solid $black;
+
+  &:after {
+    content:"";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: $orange transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+
+  &:active, &.active {
+    
+    &:after {
+      top: 9px;
+      border-color: transparent transparent $orange transparent;
+    }
+  }
+}
+
+.select-options {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: transparent;
+  border: 1px solid $black;
+  border-top: none;
+
+  li {
+    margin: 0;
+    padding: 12px 0;
+    background-color: #fff;
+    text-indent: 15px;
+    border-top: 1px solid #000;
+
+    &:first-child {
+      border-top: none;
+    }
+    
+    &:hover {
+      color: #fff;
+      background: $orange;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}

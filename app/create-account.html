@@ -42,7 +42,7 @@
 	</header>
 	
 	<div class="info">
-		<div class="info__container container">
+		<div class="info__container container" style="margin-bottom: 30px;">
 			<h1 class="info__title">Create Account</h1>
 			<div class="account">
 				<div class="account__info">
@@ -56,14 +56,109 @@
 					<div class="account__status">
 						<span class="text">Your status</span>
 						<div class="status">
-							<img class="img" src="img/icons/verify.svg" alt="">
+							<div class="posr">
+								<img class="img" src="img/icons/verify.svg" alt="">
+								<img class="tooltip tooltip1" src="img/icons/circle.svg" data-tippy-content="If you have verified you identity" alt="">
+							</div>
 							<span>Verified</span>
 						</div>
 					</div>
 				</div>
 
 				<div class="account__form">
+					<div class="grid">
+						<div class="form-group">
+							<label class="label" for="firstName">First Name</label>
+							<input class="input" id="firstName" type="text" value="Jackson">
+						</div>
+						<div class="form-group">
+							<label class="label" for="lastName">Last Name</label>
+							<input class="input" id="lastName" type="text" value="Vargas">
+						</div>
+						<div class="form-group">
+							<label class="label" for="userame">Username</label>
+							<input class="input" id="userame" type="text" value="jackson.vargas">
+						</div>
+						<div class="form-group">
+							<label class="label" for="email">Email</label>
+							<input class="input" id="email" type="email" value="jackson.vargas@gmail.com">
+						</div>
+						<div class="form-group">
+							<label class="label" for="phoneNumber">Phone number</label>
+							<input class="input" id="phoneNumber" type="text" value="+38 (098) 690 777 9">
+						</div>
+						<div class="form-group">
+							<label class="label" for="yourID">Your ID</label>
+							<input class="input" id="yourID" type="text" value="1012002">
+						</div>
+						<div class="form-group">
+							<label class="label" for="country">Country</label>
+							<select id="country" class="select js-customSelect">
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="label" for="state">State</label>
+							<select id="state" class="select js-customSelect">
+								<option value="UK">-</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="label" for="city">City</label>
+							<select id="city" class="select js-customSelect">
+								<option value="UK">London</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="label" for="city">Address</label>
+							<select id="city" class="select js-customSelect">
+								<option value="UK">130 Gloucester Road</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="label" for="postalCode">Postal code</label>
+							<input class="input" id="postalCode" type="text" value="533425">
+						</div>
+						<div class="form-group">
+							<label class="label" for="yourWallet">Your wallet</label>
+							<div class="posr">
+								<img class="tooltip tooltip3" style="right: -12px;" src="img/icons/circle.svg" data-tippy-content="This is your Ethereum wallet, created in the very beginning. " alt="">
+								<input class="input" style="width: 100%;" id="yourWallet" type="text" value="0XF234KJEWJ231KW74EQWDC">
+							</div>
+						</div>
+					</div>
 
+					<div class="section-name">Bank Requisites</div>
+					
+					<div class="grid">
+						<div class="form-group">
+							<label class="label" for="accountNumber">Account Number</label>
+							<input class="input" id="accountNumber" type="text" value="7D72069DEF">
+						</div>
+						<div class="form-group">
+							<label class="label" for="iban">IBAN</label>
+							<input class="input" id="iban" type="text" value="GB21736BGSKRNSA">
+						</div>
+					</div>
+					<a class="btn btn--fill account__form-btn posr">
+						<img class="tooltip tooltip2" style="right: -12px;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+						accept info</a>
 				</div>
 			</div>
 		</div>
@@ -72,6 +167,25 @@
 
     <script src="https://unpkg.com/popper.js@1"></script>
 	<script src="https://unpkg.com/tippy.js@5"></script>
+	<script>
+		const tooltippy1 = document.querySelector('.tooltip1');
+		const instance1 = tippy(tooltippy1, {
+			placement: 'bottom'
+		});
+		instance1.show();
+
+		const tooltippy2 = document.querySelector('.tooltip2');
+		const instance2 = tippy(tooltippy2, {
+			placement: 'rigth'
+		});
+		instance2.show();
+
+		const tooltippy3 = document.querySelector('.tooltip3');
+		const instance3 = tippy(tooltippy3, {
+			placement: 'bottom'
+		});
+		instance3.show();
+	</script>
 	<script src="js/index.js"></script>
 </body>
 </html>

@@ -9,11 +9,12 @@
 
     &__title {
         margin-bottom: 28px;
-        font-size: 24px;
+        font-size: 2vw;
         color: #121212;
     }
 
     .account {
+        display: flex;
 
         &__info {
             margin-right: 30px;
@@ -60,7 +61,58 @@
         }
 
         &__form {
+            flex: 1;
 
+            .grid {
+                margin-bottom: 28px;
+                display: grid;
+                grid-template-columns: repeat(3, 260px);
+                grid-gap: 22px 18px;
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+
+                    .label {
+                        margin-bottom: 6px;
+                        opacity: .6;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    .input {
+                        opacity: .6;
+                    }
+
+                    .select-styled {
+                        color: rgba($black, .6);
+                        border-color: rgba($black, .6);
+                    }
+
+                    .select-options {
+                        border-color: rgba($black, .6);
+                        
+                        li {
+                            border-color: rgba($black, .6);
+                            color: rgba($black, .6);
+
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .section-name {
+                margin-bottom: 18px;
+                font-size: 1.6vw;
+                color: #121212;
+            }
+
+            &-btn {
+                width: 260px;
+            }
         }
     }
 }

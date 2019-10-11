@@ -32,6 +32,22 @@ body {
     text-transform: uppercase;
     border: solid 2px $orange;
     cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        background-color: $orange;
+        color: #fff !important;
+    }
+
+    &--fill {
+        background-color: $orange;
+        color: #fff !important;
+
+        &:hover {
+            background-color: transparent;
+            color: $orange !important;
+        }
+    }
 }
 
 .posr {position: relative;}
@@ -41,6 +57,7 @@ body {
     top: 50%;
     right: 20%;
     transform: translateY(-50%);
+    z-index: 99;
 }
 
 .tippy-tooltip {
@@ -50,13 +67,12 @@ body {
     box-shadow: 0 7px 30px 0 rgba(0, 0, 0, 0.1);
 }
 .tippy-content {
+    @include font-raleway;
     padding: 14px;
     line-height: normal;
 }
-.tippy-tooltip[data-placement^=right] .tippy-arrow {
-    border-right-color: #fff;
-}
 
-.tippy-tooltip[data-placement^=left] .tippy-arrow {
-    border-left-color: #fff;
-}
+.tippy-tooltip[data-placement^=right] .tippy-arrow {border-right-color: #fff;}
+.tippy-tooltip[data-placement^=left] .tippy-arrow {border-left-color: #fff;}
+.tippy-tooltip[data-placement^=bottom] .tippy-arrow {border-bottom-color: #fff;}
+.tippy-tooltip[data-placement^=top] .tippy-arrow {border-top-color: #fff;}
