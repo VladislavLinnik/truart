@@ -135,7 +135,7 @@
 							<label class="label" for="postalCode">Postal code</label>
 							<input class="input" id="postalCode" type="text" value="533425">
 						</div>
-						<div class="form-group">
+						<div class="form-group js-focus1">
 							<label class="label" for="yourWallet">Your wallet</label>
 							<div class="posr">
 								<img class="tooltip tooltip3" style="right: -12px;" src="img/icons/circle.svg" data-tippy-content="This is your Ethereum wallet, created in the very beginning. " alt="">
@@ -156,7 +156,7 @@
 							<input class="input" id="iban" type="text" value="GB21736BGSKRNSA">
 						</div>
 					</div>
-					<a class="btn btn--fill account__form-btn posr">
+					<a class="btn btn--fill account__form-btn posr js-focus2">
 						<img class="tooltip tooltip2" style="right: -12px;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
 						accept info</a>
 				</div>
@@ -164,6 +164,7 @@
 		</div>
 	</div>
 
+	<div class="popup_overlay"></div>
 
     <script src="https://unpkg.com/popper.js@1"></script>
 	<script src="https://unpkg.com/tippy.js@5"></script>
@@ -172,19 +173,51 @@
 		const instance1 = tippy(tooltippy1, {
 			placement: 'bottom'
 		});
-		instance1.show();
+		//instance1.show();
 
 		const tooltippy2 = document.querySelector('.tooltip2');
 		const instance2 = tippy(tooltippy2, {
 			placement: 'rigth'
 		});
-		instance2.show();
+		//instance2.show();
 
 		const tooltippy3 = document.querySelector('.tooltip3');
 		const instance3 = tippy(tooltippy3, {
 			placement: 'bottom'
 		});
-		instance3.show();
+		//instance3.show();
+
+		/*document.onclick = function() {
+			instance1.show();
+			instance2.show();
+			instance3.show();
+		}*/
+
+		setTimeout(function(){
+			$('.popup_overlay').fadeIn(400);
+			instance1.show();
+			
+			setTimeout(function(){
+				$('.popup_overlay').fadeIn(400);
+				instance1.hide();
+				instance3.show();
+				$('.js-focus1').addClass('focus-element');
+
+				setTimeout(function(){
+					$('.popup_overlay').fadeIn(400);
+					instance3.hide();
+					instance2.show();
+					$('.js-focus1').removeClass('focus-element');
+					$('.js-focus2').addClass('focus-element');
+
+					setTimeout(function(){
+						$('.popup_overlay').fadeOut(400);
+						instance2.hide();
+						$('.js-focus2').removeClass('focus-element');
+					}, 3000);
+				}, 3000);
+			}, 3000);
+		}, 3000);
 	</script>
 	<script src="js/index.js"></script>
 </body>

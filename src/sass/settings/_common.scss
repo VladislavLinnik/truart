@@ -76,3 +76,17 @@ body {
 .tippy-tooltip[data-placement^=left] .tippy-arrow {border-left-color: #fff;}
 .tippy-tooltip[data-placement^=bottom] .tippy-arrow {border-bottom-color: #fff;}
 .tippy-tooltip[data-placement^=top] .tippy-arrow {border-top-color: #fff;}
+
+.focus-element {
+    position: relative;
+    z-index: 1000;
+
+    .label {
+        opacity: 1 !important;
+        color: #fff;
+    }
+
+    .input {
+        opacity: 1 !important;
+    }
+}
