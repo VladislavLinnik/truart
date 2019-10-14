@@ -1,14 +1,17 @@
 .label {
     color: $black;
     font-size: 16px;
+    opacity: .6;
 }
 
 .input {
+    @include font-raleway;
     padding: 10px;
     height: 36px;
     color: $black;
     font-size: 16px;
     border: 1px solid $black;
+    opacity: .6;
 }
 
 .select-hidden {
@@ -17,6 +20,7 @@
   padding-right: 10px;
 }
 .select {
+  @include font-raleway;
   cursor: pointer;
   display: inline-block;
   position: relative;
