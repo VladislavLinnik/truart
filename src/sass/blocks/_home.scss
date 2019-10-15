@@ -6,91 +6,6 @@
         overflow: hidden;
     }
 
-    .sidebar {
-        margin-right: 30px;
-        width: 313px;
-
-        &__account {
-            margin-bottom: 18px;
-            padding: 16px 30px 16px 14px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #fff;
-            color: #121212;
-            box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.06);
-
-            .person {
-                display: flex;
-                align-items: center;
-
-                &__avatar {
-                    margin-right: 10px;
-                    height: 60px;
-                    width: 60px;
-                    border-radius: 50%;
-                    box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.2);
-
-                    img {
-                        max-width: 100%;
-                        border: solid 4px #fff;
-                        border-radius: 50%;
-                    }
-                }
-
-                &__name {
-                    font-size: 16px;
-                }
-            }
-
-            .settings {
-
-                img {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        &__objects {
-            padding: 18px 14px;
-            height: 390px;
-            background: #fff;
-            color: #121212;
-            box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.06);
-
-            .top {
-                margin-bottom: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                &__title {
-                    font-size: 16px;
-                }
-
-                &__btn {
-                    width: 150px;
-                }
-            }
-
-            .images {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-
-                &__item {
-                    margin-bottom: 4%;
-                    width: 48%;
-
-                    img {
-                        width: 100%;
-                        display: block;
-                    }
-                }
-            }
-        }
-    }
-
     .details {
         max-height: 500px;
         flex: 1;
@@ -184,7 +99,7 @@
 
             .title {
                 color: #121212;
-                font-size: 24px;
+                font-size: 1.5vw;
             }
 
             .close {
@@ -298,7 +213,7 @@
             margin-bottom: 26px;
             color: #121212;
             text-align: left;
-            font-size: 26px;
+            font-size: 1.5vw;
         }
 
         .first-group {

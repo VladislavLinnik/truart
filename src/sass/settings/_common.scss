@@ -48,6 +48,17 @@ body {
             color: $orange !important;
         }
     }
+
+    &--disable {
+        background: rgba(#afafaf, .4);
+        color: rgba($black, .6) !important;
+        border: none;
+
+        &:hover {
+            background-color: rgba(#afafaf, .4);
+            color: rgba($black, .6) !important;
+        }
+    }
 }
 
 .popup_overlay {

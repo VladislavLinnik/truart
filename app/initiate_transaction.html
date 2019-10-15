@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- FOR ADAPTIVE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- STYLES -->
+	<link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/backdrop.css" />
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- ПОДКЛЮЧЕНИЕ JQUERY -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="js/jquery.3.3.1.min.js"></script>
+
+	<title>TruArt</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <div class="header__actions">
+                <div class="notification">
+                    <div class="notification__img">
+                        <img src="img/icons/bell.svg" alt="">
+                    </div>
+                </div>
+                <div class="logout">Log out</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="initiate-transaction">
+        <div class="initiate-transaction__container container">
+            <aside class="sidebar">
+                <div class="sidebar__account">
+                    <div class="person">
+                        <div class="person__avatar">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="person__name">Jackson Vargas</div>
+                    </div>
+                    <div class="settings">
+                        <img class="js-openPopup1" src="img/icons/settings.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="sidebar__objects">
+                    <div class="top">
+                        <div class="top__title">Objects</div>
+                        <div class="top__btn btn js-openPopup2">add new object</div>
+                    </div>
+                    <ul class="images">
+                        <li class="images__item">
+                            <img src="img/picture_1.png" alt="">
+                        </li>
+                        <li class="images__item">
+                            <img src="img/picture_2.png" alt="">
+                        </li>
+                        <li class="images__item">
+                            <img src="img/picture_2.png" alt="">
+                        </li>
+                        <li class="images__item">
+                            <img src="img/picture_1.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn btn--disable">initiate transaction</div>
+            </aside>
+
+            <div class="info">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
