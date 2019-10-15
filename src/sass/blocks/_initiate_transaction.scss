@@ -11,5 +11,138 @@
         background-color: #fff;
         color: $black;
         overflow: auto;
+
+        &__top {
+            margin-bottom: 34px;
+            display: flex;
+            justify-content: space-between;
+
+            .title {
+                font-size: 1.5vw;
+                color: #121212;
+            }
+
+            .close {
+                color: $orange;
+                font-size: 14px;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+
+        .info-subtop {
+            display: flex;
+        }
+
+        .detail {
+            display: flex;
+            align-items: center;
+            color: $black;
+            font-size: 16px;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &-group {
+                margin-bottom: 30px;
+            }
+
+            .key {
+                margin-right: 40px;
+                width: 160px;
+                font-weight: bold;
+                opacity: .6;
+            }
+
+            .value {
+                @include font-raleway;
+            }
+        }
+
+        .tip {
+            margin-left: auto;
+            width: 266px;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+
+            &__text {
+                padding: 4px 0;
+                text-align: center;
+                color: #fff;
+                background: $orange;
+            }
+        }
+
+        & > .grid {
+            margin-bottom: 22px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 255px);
+            grid-column-gap: 20px;
+
+            &--two {
+                grid-column: span 2;
+            }
+
+            &--four {
+                grid-template-columns: repeat(4, 118px);
+            }
+
+            &-item {
+
+                &--textarea {
+                    width: 100%;
+
+                    .textarea {
+                        @include font-raleway;
+                        padding: 10px 18px 10px 10px;
+                        min-height: 90px;
+                        width: 100%;
+                        color: rgba($black, .6);
+                        font-size: 16px;
+                        border: 1px solid rgba($black, .4);
+                        resize: none;
+                    }
+                }
+
+                .label {
+                    margin-bottom: 6px;
+                    display: block;
+                }
+
+                .input {
+                    width: 100%;
+
+                    &-wrap {
+
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            margin-top: 35px;
+            display: flex;
+
+            .btn {
+                margin-right: 20px;
+                width: 150px;
+            }
+        }
+
+        .subtitle {
+            margin-bottom: 14px;
+            font-size: 1.3vw;
+        }
+
+        .select-styled, .select-options li {
+            font-size: 14px;
+        }
     }
 }
