@@ -34,9 +34,31 @@
                 <div class="notification">
                     <div class="notification__img">
                         <img src="img/icons/bell.svg" alt="">
+                        <div class="notification__dropdown">
+                            <ul class="notification__list">
+                                <li class="notification__item active posr">
+                                    <div class="notification__item-icon"></div>
+                                    <div class="notification__item-text">
+                                        New object created <img class="tooltip tooltip7" style="right: 94%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+                                    </div>
+                                </li>
+                                <li class="notification__item">
+                                    <div class="notification__item-icon"></div>
+                                    <div class="notification__item-text">
+                                        Information updated
+                                    </div>
+                                </li>
+                                <li class="notification__item">
+                                    <div class="notification__item-icon"></div>
+                                    <div class="notification__item-text">
+                                        Client identified
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="logout">Log out</div>
+                <a href="login.html" class="logout">Log out</a>
             </div>
         </div>
     </header>
@@ -52,15 +74,16 @@
                             </div>
                             <div class="person__name">Jackson Vargas</div>
                         </div>
-                        <div class="settings">
+                        <div class="settings posr">
                             <img class="js-openPopup1" src="img/icons/settings.svg" alt="">
+                            <img class="tooltip tooltip1" style="top: 100%; right: -30%;" src="img/icons/circle.svg" data-tippy-content="Click here to view/ edit your profile" alt="">
                         </div>
                     </div>
 
                     <div class="sidebar__objects">
                         <div class="top">
                             <div class="top__title">Objects</div>
-                            <div class="top__btn btn js-openPopup2">add new object</div>
+                            <div class="top__btn btn js-openPopup2 posr">add new object <img class="tooltip tooltip2" style="right: -10%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt=""></div>
                         </div>
                         <ul class="images">
                             <li class="images__item">
@@ -203,7 +226,7 @@
                             <span>Verified</span>
                         </div>
                     </div>
-                    <div class="btn">Edit info</div>
+                    <a href="create-account.html" class="btn">Edit info</a>
                 </div>
                 <div class="info__right">
                     <div class="section">
@@ -297,7 +320,7 @@
                         <label for="idCode" class="label">Identification code</label>
                         <div class="block">
                             <input type="text" class="input" id="idCode">
-                            <button class="btn btn--fill js-openPopup3">link your object</button>
+                            <button class="btn btn--fill js-openPopup3 posr">link your object <img class="tooltip tooltip3" style="right: 10%;" src="img/icons/circle-green.svg" data-tippy-content="Click here to continue the demonstration" alt=""></button>
                         </div>
                     </div>
                     <div class="form-group">
@@ -323,7 +346,7 @@
                     <div class="img">
                         <img src="img/avatar.png" alt="">
                     </div>
-                    <div class="descr">Add Getty object ID</div>
+                    <div class="descr posr">Add Getty object ID <img class="tooltip tooltip4" style="right: 10%;" src="img/icons/circle-green.svg" data-tippy-content="At this step, a user can add at their discretion a description according to the Getty Object ID: Guidelines for Making Records that Describe Art, Antiques, and Antiquities. For the purposes of the prototype we omit this process." alt=""></div>
                 </div>
             </div>
             <div class="second-group">
@@ -345,20 +368,21 @@
                 <textarea id="description" class="textarea">It is a life-sized depiction of the character Danaë from Greek mythology, the mother of Perseus. She is presumably depicted as welcoming Zeus, who impregnated her in the form of a shower of gold.</textarea>
             </div>
             <div class="buttons">
-                <div class="btn btn--fill">Create object</div>
+                <div class="btn btn--fill posr js-closePopup2">Create object <img class="tooltip tooltip6" style="right: 0%;" src="img/icons/circle-green.svg" data-tippy-content="Click here to continue the demonstration" alt=""></div>
                 <div class="btn">Cancel</div>
             </div>
         </div>
     </div>
     
     <div class="popup3">
-		<div class="popup3_content">
+		<div class="popup3_content posr">
             <h2 class="title">Please download the TruArt application to a camera-equipped device and note that this application works best with a smartphone or a tablet. </h2>
 			<div class="btns">
 				<img class="js-openPopup4" src="img/app-store.png" alt="">
 				<img class="js-openPopup4" src="img/google-play.png" alt="">
 			</div>
-			<div class="send_link js-openPopup4">Send me the link</div>
+            <div class="send_link js-openPopup4">Send me the link</div>
+            <img class="tooltip tooltip5" style="top: 98%; right: 70%;" src="img/icons/circle.svg" data-tippy-content="At this step a user is redirected to an application download page. for the purposes of the prototype we assume that the application has been already downloaded" alt=""></div>
         </div>
 	</div>
     
@@ -373,7 +397,7 @@
 		<div class="popup5_content">
             <h2 class="title">Your object link code is</h2>
             <input type="text" class="input" value="aERX56743ASsgdmklfcGdCBNwE3RQWEF">
-            <div class="btn">continue</div>
+            <div class="btn js-closePopup5">continue</div>
         </div>
 	</div>
 
@@ -391,7 +415,9 @@
     
     $(function(){
 		$('.js-openPopup2').click(function(){
-			$('.popup2, .popup_overlay').fadeIn(400);
+            $('.popup2, .popup_overlay').fadeIn(400);
+            instance3.show();
+            instance4.show();
 		});
 		$('.popup_overlay').click(function(){
 			$('.popup2, .popup_overlay').fadeOut(400);
@@ -401,7 +427,8 @@
     $(function(){
 		$('.js-openPopup3').click(function(){
 			$('.popup3, .popup_overlay').fadeIn(400);
-			$('.popup2').fadeOut(400);
+            $('.popup2').fadeOut(400);
+            instance5.show();
 		});
 		$('.popup_overlay').click(function(){
 			$('.popup3, .popup_overlay').fadeOut(400);
@@ -426,7 +453,48 @@
 		$('.popup_overlay').click(function(){
 			$('.popup5, .popup_overlay').fadeOut(400);
 		});
-	});
+    });
+
+    $('.js-closePopup5').on('click', function(){
+        $('.popup5, .popup_overlay').fadeOut(400);
+        $('.popup2, .popup_overlay').fadeIn(400);
+        instance6.show();
+        instance4.show();
+    });
+
+    $('.js-closePopup2').on('click', function(){
+        $('.popup2, .popup_overlay').fadeOut(400);
+        $('.notification__dropdown').addClass('active');
+        instance7.show();
+    });
+    
+    const instance1 = tippy(document.querySelector('.tooltip1'), {
+        placement: 'bottom'
+    }).show();
+
+    const instance2 = tippy(document.querySelector('.tooltip2'), {
+        placement: 'right'
+    }).show();
+
+    const instance3 = tippy(document.querySelector('.tooltip3'), {
+        placement: 'right'
+    });
+
+    const instance4 = tippy(document.querySelector('.tooltip4'), {
+        placement: 'bottom'
+    });
+
+    const instance5 = tippy(document.querySelector('.tooltip5'), {
+        placement: 'bottom'
+    });
+
+    const instance6 = tippy(document.querySelector('.tooltip6'), {
+        placement: 'right'
+    });
+
+    const instance7 = tippy(document.querySelector('.tooltip7'), {
+        placement: 'left'
+    });
     </script>
 	<script src="js/index.js"></script>
 </body>
