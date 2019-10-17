@@ -36,7 +36,7 @@
                         <img src="img/icons/bell.svg" alt="">
                         <div class="notification__dropdown">
                             <ul class="notification__list">
-                                <li class="notification__item active posr">
+                                <li class="notification__item posr active" onclick="window.location='object_page.html'">
                                     <div class="notification__item-icon"></div>
                                     <div class="notification__item-text">
                                         New object created <img class="tooltip tooltip7" style="right: 94%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
@@ -87,7 +87,10 @@
                         </div>
                         <ul class="images">
                             <li class="images__item">
-                                <img src="img/picture_1.png" alt="">
+                                <a class="posr" style="display: block;" href="object_page.html">
+                                    <img src="img/picture_1.png" alt="">
+                                    <img class="tooltip tooltip8" style="display: none; top: 95%; right: 55%;" src="img/icons/circle.svg" data-tippy-content="Click here to view the object page" alt="">
+                                </a>
                             </li>
                             <li class="images__item">
                                 <img src="img/picture_2.png" alt="">
@@ -368,7 +371,7 @@
                 <textarea id="description" class="textarea">It is a life-sized depiction of the character Danaë from Greek mythology, the mother of Perseus. She is presumably depicted as welcoming Zeus, who impregnated her in the form of a shower of gold.</textarea>
             </div>
             <div class="buttons">
-                <div class="btn btn--fill posr js-closePopup2">Create object <img class="tooltip tooltip6" style="right: 0%;" src="img/icons/circle-green.svg" data-tippy-content="Click here to continue the demonstration" alt=""></div>
+                <div class="btn btn--fill posr js-closePopup2">Create object <img class="tooltip tooltip6" style="display: none; right: 0%;" src="img/icons/circle-green.svg" data-tippy-content="Click here to continue the demonstration" alt=""></div>
                 <div class="btn">Cancel</div>
             </div>
         </div>
@@ -428,6 +431,7 @@
 		$('.js-openPopup3').click(function(){
 			$('.popup3, .popup_overlay').fadeIn(400);
             $('.popup2').fadeOut(400);
+            $('.tooltip3').css('display', 'none');
             instance5.show();
 		});
 		$('.popup_overlay').click(function(){
@@ -458,6 +462,7 @@
     $('.js-closePopup5').on('click', function(){
         $('.popup5, .popup_overlay').fadeOut(400);
         $('.popup2, .popup_overlay').fadeIn(400);
+        $('.tooltip6').show();
         instance6.show();
         instance4.show();
     });
@@ -465,7 +470,10 @@
     $('.js-closePopup2').on('click', function(){
         $('.popup2, .popup_overlay').fadeOut(400);
         $('.notification__dropdown').addClass('active');
+        $('.tooltip8').show();
+        $('.tooltip1, .tooltip2').hide();
         instance7.show();
+        instance8.show();
     });
     
     const instance1 = tippy(document.querySelector('.tooltip1'), {
@@ -494,6 +502,10 @@
 
     const instance7 = tippy(document.querySelector('.tooltip7'), {
         placement: 'left'
+    });
+
+    const instance8 = tippy(document.querySelector('.tooltip8'), {
+        placement: 'bottom'
     });
     </script>
 	<script src="js/index.js"></script>

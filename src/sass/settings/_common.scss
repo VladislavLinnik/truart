@@ -95,7 +95,7 @@ body {
 .tippy-content {
     @include font-raleway;
     padding: 14px;
-    line-height: normal;
+    line-height: 1.3;
 }
 
 [data-tippy-content] {
