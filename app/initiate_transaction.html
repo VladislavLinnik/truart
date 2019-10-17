@@ -119,10 +119,11 @@
                 </div>
 
                 <div class="grid">
-                    <div class="grid-item">
+                    <div class="grid-item posr">
                         <label for="seller" class="label">Seller</label>
-                        <div class="input-wrap">
+                        <div class="input-wrap posr js-focus1">
                             <input type="text" class="input" value="Jackson Vargas" id="seller">
+                            <img class="tooltip tooltip1" style="right: 95%;" src="img/icons/circle.svg" data-tippy-content="In this prototype, we assume that the transaction is initiated by the seller, and the buyer can either agree to or decline the seller’s offers. On the real platform, both parties can be initiators of any condition or term." alt="">
                         </div>
                     </div>
                     <div class="grid-item">
@@ -134,13 +135,15 @@
                     <div class="grid-item">
                         <label for="buyer" class="label">Expert</label>
                         <div class="input-wrap">
-                            <div class="btn btn--fill">add an expert</div>
+                            <div class="btn btn--fill posr js-focus2">add an expert
+                                <img class="tooltip tooltip2" style="top: 0; right: 50%;" src="img/icons/circle-green.svg" data-tippy-content="An expert could be added to the transaction at a later stage too, but if you know who the preferable expert is, you can add their name here." alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="grid">
-                    <div class="grid grid--two">
+                    <div class="grid grid--three">
                         <div class="grid-item">
                             <label for="currency" class="label">Currency</label>
                             <div class="input-wrap">
@@ -160,15 +163,17 @@
                         </div>
                         <div class="grid-item">
                             <label for="honestMoney" class="label">Honest Money (10%)</label>
-                            <div class="input-wrap">
+                            <div class="input-wrap posr js-focus3">
                                 <input type="text" class="input input-info" value="15,000,000" id="honestMoney">
+                                <img class="icon-info" src="img/icons/info.svg" alt="">
+                                <img class="tooltip tooltip3" style="top: 30%; right: 0%;" src="img/icons/circle.svg" data-tippy-content="Here, you can specify the amount of “honest money” - the initial deposit that takes the object off the market. It's a good faith deposit to tell the seller that the buyer is serious and ready to buy. At the end of the transaction, that money will be applied toward your closing cost and down payment." alt="">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="grid">
-                    <div class="grid grid--two grid--four">
+                    <div class="grid grid--four">
                         <div class="grid-item">
                             <label for="startDate" class="label">Start date</label>
                             <div class="input-wrap">
@@ -240,25 +245,78 @@
                 </div>
 
                 <div class="grid">
-                    <div class="grid--two grid-item grid-item--textarea">
+                    <div class="grid--fill-two grid-item grid-item--textarea">
                         <label for="specialConditions" class="label">Special conditions</label>
-                        <div class="input-wrap">
+                        <div class="input-wrap posr js-focus4">
                             <textarea id="specialConditions" class="textarea">The Artwork must be delivered inspecial case.
                             </textarea>
+                            <img class="tooltip tooltip4" style="right: 0%;" src="img/icons/circle.svg" data-tippy-content="Any of this data can be changed at a later stage" alt="">
                         </div>
                     </div>
                 </div>
 
                 <div class="buttons">
-                    <div class="btn btn--fill">create transaction</div>
+                    <a href="transaction_details.html" class="btn btn--fill">create transaction</a>
                     <div class="btn">cancel</div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="popup_overlay"></div>
+
     <script src="https://unpkg.com/popper.js@1"></script>
     <script src="https://unpkg.com/tippy.js@5"></script>
+    <script>
+    const instance1 = tippy(document.querySelector('.tooltip1'), {
+        placement: 'bottom'
+    });
+
+    const instance2 = tippy(document.querySelector('.tooltip2'), {
+        placement: 'top'
+    });
+
+    const instance3 = tippy(document.querySelector('.tooltip3'), {
+        placement: 'bottom'
+    });
+
+    const instance4 = tippy(document.querySelector('.tooltip4'), {
+        placement: 'right'
+    });
+
+    setTimeout(function(){
+			$('.popup_overlay').fadeIn(400);
+            $('.js-focus1').addClass('focus-element');
+			instance1.show();
+			
+			setTimeout(function(){
+				instance1.hide();
+				instance2.show();
+				$('.js-focus1').removeClass('focus-element');
+                $('.js-focus2').addClass('focus-element');
+
+				setTimeout(function(){
+					$('.js-focus2').removeClass('focus-element');
+					$('.js-focus3').addClass('focus-element');
+					instance2.hide();
+                    instance3.show();
+                    
+                    setTimeout(function(){
+                        instance3.hide();
+                        instance4.show();
+                        $('.js-focus3').removeClass('focus-element');
+                        $('.js-focus4').addClass('focus-element');
+                        
+                        setTimeout(function(){
+                            $('.popup_overlay').fadeOut(400);
+                            instance4.hide();
+                            $('.js-focus4').removeClass('focus-element');
+                        }, 1000);
+					}, 1000);
+				}, 1000);
+			}, 1000);
+		}, 0);
+    </script>
     <script src="js/index.js"></script>
 </body>
 </html>

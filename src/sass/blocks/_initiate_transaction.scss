@@ -86,8 +86,12 @@
             grid-template-columns: repeat(3, 255px);
             grid-column-gap: 20px;
 
-            &--two {
+            &--fill-two {
                 grid-column: span 2;
+            }
+
+            &--three {
+                grid-template-columns: repeat(3, 164px);
             }
 
             &--four {
@@ -118,10 +122,15 @@
 
                 .input {
                     width: 100%;
+                }
 
-                    &-wrap {
-
-                    }
+                .icon-info {
+                    height: 17px;
+                    width: 17px;
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%);
                 }
             }
         }
