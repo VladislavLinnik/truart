@@ -1,13 +1,10 @@
 .home {
 
     .wrap {
-        max-height: 500px;
         display: flex;
-        overflow: hidden;
     }
 
     .details {
-        max-height: 500px;
         flex: 1;
         box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.06);
         background-color: #fff;
@@ -43,6 +40,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    color: $orange;
 
                     .img {
                         width: 14px;

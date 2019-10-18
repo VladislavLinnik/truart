@@ -82,9 +82,7 @@
             <div class="info">
                 <div class="info__top">
                     <div class="title">Transaction details</div>
-                    <a href="transaction_details_status_2.html" class="close posr">Close
-                        <img class="tooltip tooltip1" style="right: 95%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
-                    </a>
+                    <div class="close">Close</div>
                 </div>
                 <div class="wrap">
                     <div class="wrap__left">
@@ -166,9 +164,9 @@
                         </div>
 
                         <div class="btn-group">
-                            <div class="btn posr">Cancel transaction
-                                <img class="tooltip tooltip3" style="right: 5%;" src="img/icons/circle.svg" data-tippy-content="The process of cancelling a transaction depends on the transaction status.
-                                At this step, you can easily cancel the transaction. The process is not described by this prototype.. " alt="">
+                            <div class="btn">Cancel transaction</div>
+                            <div class="add posr js-openPopup1">Add details for the expert
+                                <img class="tooltip tooltip3" style="display: none; right: 0%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
                             </div>
                         </div>
                     </div>
@@ -182,17 +180,19 @@
                         <div class="addition">
                             <div class="addition__title">Status</div>
                             <div class="addition__status">
-                                <div class="circle posr">1
-                                    <img class="tooltip tooltip2" style="right: 0%;" src="img/icons/circle.svg" data-tippy-content="After the buyer confirms the transaction, the buyer deposits the honest money and necessary fees in their account with their regular bank and gives their consent to transfer relative amounts to particular payees.
-                                    This prototype describes the transaction from the seller’s perspective only, that is why this process is not described here. " alt="">
+                                <div class="circle posr">
+                                    <span class="js-statusCircle">2</span>
+                                    <img class="tooltip tooltip2" style="display: none; right: 40%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
                                 </div>
-                                <div class="text">Both parties confirm the transaction details</div>
+                                <div class="text">An expert gets involved</div>
                             </div>
                             <p class="descr">The buyer deposits the honest money</p>
                             <div class="rating">
-                                <div class="rating__circle active">1</div>
-                                <div class="rating__circle">2</div>
-                                <div class="rating__circle">3</div>
+                                <div class="rating__circle passed">1</div>
+                                <div class="rating__circle active js-circleTwo">2</div>
+                                <div class="rating__circle posr js-circleThree">3
+                                    <img class="tooltip tooltip1" style="right: 10%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+                                </div>
                                 <div class="rating__circle">4</div>
                                 <div class="rating__circle">5</div>
                                 <div class="rating__circle">6</div>
@@ -210,6 +210,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="popup_overlay"></div>
+        <div class="popup1">
+            <div class="popup1_content">
+                
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/popper.js@1"></script>
@@ -221,11 +228,31 @@
         
         const instance2 = tippy(document.querySelector('.tooltip2'), {
             placement: 'left'
-        }).show();
+        });
 
         const instance3 = tippy(document.querySelector('.tooltip3'), {
             placement: 'right'
-        }).show();
+        });
+
+        $('.js-circleThree').on('click', function(){
+            $('.tooltip1').hide();
+            $('.tooltip2, .tooltip3').show();
+            $('.js-statusCircle').text('3');
+            $(this).addClass('active');
+            $('.js-circleTwo').addClass('passed');
+            instance2.show();
+            instance3.show();
+        });
+
+        $(function(){
+            $('.js-openPopup1').click(function(){
+                $('.tooltip2, .tooltip3').hide();
+                $('.popup1, .popup_overlay').fadeIn(400);
+            });
+            $('.popup_overlay').click(function(){
+                $('.popup1, .popup_overlay').fadeOut(400);
+            });
+        });
         </script>
     <script src="js/index.js"></script>
 </body>
