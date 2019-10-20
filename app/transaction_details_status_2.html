@@ -41,7 +41,7 @@
         </div>
     </header>
 
-    <div class="transaction-details">
+    <div class="transaction-details td-status2">
         <div class="transaction-details__container container" style="padding-bottom: 100px">
             <aside class="sidebar">
                 <div class="sidebar__account">
@@ -165,7 +165,7 @@
 
                         <div class="btn-group">
                             <div class="btn">Cancel transaction</div>
-                            <div class="add posr js-openPopup1">Add details for the expert
+                            <div class="add posr js-openPopup1 js-focus2">Add details for the expert
                                 <img class="tooltip tooltip3" style="display: none; right: 0%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
                             </div>
                         </div>
@@ -180,9 +180,10 @@
                         <div class="addition">
                             <div class="addition__title">Status</div>
                             <div class="addition__status">
-                                <div class="circle posr">
+                                <div class="circle posr js-focus1">
                                     <span class="js-statusCircle">2</span>
-                                    <img class="tooltip tooltip2" style="display: none; right: 40%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+                                    <img class="tooltip tooltip2" style="display: none; right: 40%;" src="img/icons/circle.svg" data-tippy-content="The seller is initiating the expert search. On the real platform, these terms are subject to online confirmation by both parties, and both buyer and seller confirm their consent of the chosen expert.
+                                    For the purposes of this prototype, the process is shown from the seller’s perspective." alt="">
                                 </div>
                                 <div class="text">An expert gets involved</div>
                             </div>
@@ -214,7 +215,180 @@
         <div class="popup_overlay"></div>
         <div class="popup1">
             <div class="popup1_content">
-                
+                <h3 class="title">Involve an expert</h3>
+                <div class="group">
+                    <div class="group__item">
+                        <div class="label">Authenticity report delivery date</div>
+                        <div class="action">
+                            <select class="js-customSelect">
+                                <option>20 Sep 2019</option>
+                                <option>20 Sep 2019</option>
+                                <option>20 Sep 2019</option>
+                                <option>20 Sep 2019</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="group__item">
+                        <div class="label">Who is paying the appraisal fees</div>
+                        <div class="action">
+                            <div class="progress">
+                                <div class="progress__line">
+                                    <div class="line"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="progress__text">
+                                    <div>Seller: 50%</div>
+                                    <div>Buyer: 50%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subtitle">Transportation expenses</div>
+                <div class="group">
+                    <div class="group__item">
+                        <div class="label">From the Seller to the Expert</div>
+                        <div class="action">
+                            <div class="progress">
+                                <div class="progress__line">
+                                    <div class="line"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="progress__text">
+                                    <div>Seller: 50%</div>
+                                    <div>Buyer: 50%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group__item">
+                        <div class="label">From the Seller to the Buyer</div>
+                        <div class="action">
+                            <div class="progress">
+                                <div class="progress__line">
+                                    <div class="line"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="progress__text">
+                                    <div>Seller: 50%</div>
+                                    <div>Buyer: 50%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="group__item">
+                        <div class="label">Insurance expenses</div>
+                        <div class="action">
+                            <div class="progress">
+                                <div class="progress__line">
+                                    <div class="line"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="progress__text">
+                                    <div>Seller: 50%</div>
+                                    <div>Buyer: 50%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group__item">
+                        <div class="label">What to do if the object is not authentic</div>
+                        <div class="action">
+                            <select class="js-customSelect">
+                                <option>Deliver back to the seller</option>
+                                <option>Deliver back to the seller</option>
+                                <option>Deliver back to the seller</option>
+                                <option>Deliver back to the seller</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <p class="description">In case the object has to be delivered back to the seller, who is paying the delivery fee and insurance</p>
+                <div class="group">
+                    <div class="group__item">
+                        <div class="action">
+                            <div class="progress">
+                                <div class="progress__line">
+                                    <div class="line"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="progress__text">
+                                    <div>Seller: 50%</div>
+                                    <div>Buyer: 50%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <div class="btn btn--fill posr js-openPopup2">Save
+                        <img class="tooltip tooltip4" style="top: 100%; right: 40%;" src="img/icons/circle-green.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+                    </div>
+                    <div class="btn">cancel</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup2">
+            <div class="popup2_content">
+                <h3 class="title">Please choose the way to involve an expert</h3>
+                <div class="row">
+                    <div class="row__text">Please click here if you know the expert you want to involve</div>
+                    <div class="btn posr">Invite
+                        <img class="tooltip tooltip5" style="top: -8%; right: -8%;" src="img/icons/circle.svg" data-tippy-content="An invitation to join the platform will be sent to the expert of your choice by email.
+                        The prototype doesn’t describe this process." alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row__text">Please click here if you don’t know the expert you want to involve </div>
+                    <div class="btn btn--fill js-openPopup3">Choose</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup3">
+            <div class="popup3_content">
+                <h3 class="title posr">The object in question
+                    <img class="tooltip tooltip5" style="top: 0%; right: 0%;" src="img/icons/circle.svg" data-tippy-content="For the purposes of this prototype, the seller is initiating assignment for the expert. On the real platform, these terms are subject to online confirmation by both parties." alt="">
+                </h3>
+                <div class="form-group">
+                    <label for="select1" class="label">Report delivery date</label>
+                    <select id="select1" class="js-customSelect">
+                        <option>02 Oct 2019</option>
+                        <option>02 Oct 2019</option>
+                        <option>02 Oct 2019</option>
+                        <option>02 Oct 2019</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="input1" class="label">Deliver back to the seller</label>
+                    <input type="text" class="input" id="input1" value="130 Gloucester Road, London, GB">
+                </div>
+                <div class="form-group">
+                    <label for="input2" class="label">Delivery address if the object is authentic</label>
+                    <input type="text" class="input" id="input2" value="Alexanderplatz 1, Berlin, DE">
+                </div>
+                <div class="btn btn--fill js-openPopup4">submit</div>
+            </div>
+        </div>
+
+        <div class="popup4">
+            <div class="popup4_content">
+                <h3 class="title">Please choose the way to find an expert</h3>
+                <div class="row">
+                    <div class="row__text">Invite preselected</div>
+                    <div class="btn posr">Invite
+                        <img class="tooltip tooltip7" style="top: -8%; right: -8%;" src="img/icons/circle.svg" data-tippy-content="An invitation will be sent to the experts pre-selected by you from those available on the platform.
+                        The prototype doesn’t describe this process." alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row__text">Make a public offer</div>
+                    <a href="transaction_details_view.html" class="btn btn--fill">Choose</a>
+                </div>
             </div>
         </div>
     </div>
@@ -234,23 +408,89 @@
             placement: 'right'
         });
 
+        const instance4 = tippy(document.querySelector('.tooltip4'), {
+            placement: 'bottom'
+        });
+
+        const instance5 = tippy(document.querySelector('.tooltip5'), {
+            placement: 'top'
+        });
+
+        const instance6 = tippy(document.querySelector('.tooltip6'), {
+            placement: 'top'
+        });
+
+        const instance7 = tippy(document.querySelector('.tooltip7'), {
+            placement: 'right'
+        });
+
         $('.js-circleThree').on('click', function(){
             $('.tooltip1').hide();
             $('.tooltip2, .tooltip3').show();
             $('.js-statusCircle').text('3');
             $(this).addClass('active');
             $('.js-circleTwo').addClass('passed');
-            instance2.show();
-            instance3.show();
+
+            setTimeout(function(){
+                $('.popup_overlay').fadeIn(400);
+                instance2.show();
+                $('.js-focus1').addClass('focus-element');
+                
+                setTimeout(function(){
+                    instance2.hide();
+                    instance3.show();
+                    $('.js-focus1').removeClass('focus-element');
+                    $('.js-focus2').addClass('focus-element');
+
+                    setTimeout(function(){
+                        $('.js-focus2').removeClass('focus-element');
+                        $('.popup_overlay').fadeOut(400);
+                    }, 1000);
+                }, 1000);
+            }, 0);
         });
 
         $(function(){
             $('.js-openPopup1').click(function(){
                 $('.tooltip2, .tooltip3').hide();
+                instance4.show();
                 $('.popup1, .popup_overlay').fadeIn(400);
             });
             $('.popup_overlay').click(function(){
                 $('.popup1, .popup_overlay').fadeOut(400);
+            });
+        });
+
+        $(function(){
+            $('.js-openPopup2').click(function(){
+                $('.popup1').fadeOut(400);
+                $('.popup2').fadeIn(400);
+                instance5.show();
+            });
+            $('.popup_overlay').click(function(){
+                $('.popup2, .popup_overlay').fadeOut(400);
+            });
+        });
+
+        $(function(){
+            $('.js-openPopup3').click(function(){
+                $('.popup2').fadeOut(400);
+                $('.popup3').fadeIn(400);
+                instance6.show();
+            });
+            $('.popup_overlay').click(function(){
+                $('.popup3, .popup_overlay').fadeOut(400);
+            });
+        });
+
+        $(function(){
+            $('.js-openPopup4').click(function(){
+                $('.popup3').fadeOut(400);
+                $('.popup4').fadeIn(400);
+                instance7.show();
+            });
+            $('.popup_overlay').click(function(){
+                $('.popup4, .popup_overlay').fadeOut(400);
             });
         });
         </script>

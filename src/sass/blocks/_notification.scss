@@ -2,7 +2,8 @@
 
     &__dropdown {
         margin-top: 15px;
-        min-width: 240px;
+        min-width: 250px;
+        // для отмены переноса текста min-width убрать и в item добавить white-space: nowrap;
         position: absolute;
         top: 100%;
         right: calc(100% - 20px);
@@ -17,7 +18,7 @@
     }
 
     &__item {
-        padding: 12px 18px;
+        padding: 12px;
         display: flex;
         align-items: center;
 

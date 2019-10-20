@@ -57,7 +57,9 @@
 			</div>
 		</div>
 		<div class="forgot_password">FORGOT PASSWORD?</div>
-		<div class="btn">Login</div>
+		<a href="../app_notooltips/login.html" class="btn posr">Login
+			<img class="tooltip tooltip2" style="right: 20%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration without tooltips" alt="">
+		</a>
 		<a class="not_member posr" href="register.html">Not a member yet? 
 			<img class="tooltip" style="right: -20%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
 		</a>
@@ -75,6 +77,12 @@
 			placement: 'right'
 		});
 		instance1.show();
+
+		const tooltippy2 = document.querySelector('.tooltip2');
+		const instance2 = tippy(tooltippy2, {
+			placement: 'right'
+		});
+		instance2.show();
 
 		document.onclick = function() {
 			instance1.show();

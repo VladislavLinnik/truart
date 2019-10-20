@@ -77,13 +77,15 @@
                     </ul>
                 </div>
 
-                <a class="btn btn--fill" href="initiate_transaction.html">initiate transaction</a>
+                <a class="btn btn--fill posr" href="initiate_transaction.html">initiate transaction
+                    <img class="tooltip tooltip2" style="top: 0; right: 35%;" src="img/icons/circle-green.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+                </a>
             </aside>
 
             <div class="info">
                 <div class="top">
                     <h2 class="title">Object page</h2>
-                    <div class="close">CLOSE</div>
+                    <a class="close" href="home.html">CLOSE</a>
                 </div>
 
                 <div class="middle-wrap">
@@ -142,7 +144,13 @@
     </section>
 
     <script src="https://unpkg.com/popper.js@1"></script>
-	<script src="https://unpkg.com/tippy.js@5"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+    <script>
+    const instance1 = tippy(document.querySelector('.tooltip'), {
+        placement: 'top'
+    });
+    instance1.show();
+    </script>
 	<script src="js/index.js"></script>
 </body>
 </html>

@@ -83,7 +83,7 @@
                             <div class="top__btn btn">add new object</div>
                         </div>
                         <ul class="images">
-                            <li class="images__item">
+                            <li class="images__item js-focus2">
                                 <a class="posr" style="display: block;" href="object_page.html">
                                     <img src="img/picture_1.png" alt="">
                                     <img class="tooltip tooltip2" style="top: 95%; right: 45%;" src="img/icons/circle.svg" data-tippy-content="Your object is shown here until you hold the ownership rights (until the title is transferred)." alt="">
@@ -120,7 +120,7 @@
                         <div class="grid-cell grid-cell--info posr">
                             <a href="transaction_details.html" class="text">More info</a> 
                             <img class="img" src="img/icons/menu_dots.svg" alt="">
-                            <img class="tooltip tooltip1" style="top: 85%; right: 55%;" src="img/icons/circle.svg" data-tippy-content="Click here to view the deal status" alt="">
+                            <img class="tooltip tooltip1 js-focus1" style="top: 85%; right: 55%;" src="img/icons/circle.svg" data-tippy-content="Click here to view the deal status" alt="">
                         </div>
                     </div>
                     <div class="archive">Archive</div>
@@ -226,11 +226,30 @@
     <script>
     const instance1 = tippy(document.querySelector('.tooltip1'), {
         placement: 'bottom'
-    }).show();
+    });
 
     const instance2 = tippy(document.querySelector('.tooltip2'), {
         placement: 'bottom'
-    }).show();
+    });
+
+    setTimeout(function(){
+        $('.popup_overlay').fadeIn(400);
+        $('.js-focus1').addClass('focus-element');
+        instance1.show();
+        
+        setTimeout(function(){
+            instance1.hide();
+            instance2.show();
+            $('.js-focus1').removeClass('focus-element');
+            $('.js-focus2').addClass('focus-element');
+
+            setTimeout(function(){
+                instance2.hide();
+                $('.js-focus2').removeClass('focus-element');
+                $('.popup_overlay').fadeOut(400);
+            }, 1000);
+        }, 1000);
+    }, 0);
     </script>
 	<script src="js/index.js"></script>
 </body>

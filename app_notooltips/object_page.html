@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- FOR ADAPTIVE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- STYLES -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- ПОДКЛЮЧЕНИЕ JQUERY -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="js/jquery.3.3.1.min.js"></script>
+
+	<title>TruArt</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <div class="header__actions">
+                <div class="notification">
+                    <div class="notification__img">
+                        <img src="img/icons/bell.svg" alt="">
+                    </div>
+                </div>
+                <a href="login.html" class="logout">Log out</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="object">
+        <div class="object__container container">
+            <aside class="sidebar">
+                <div class="sidebar__account">
+                    <div class="person">
+                        <div class="person__avatar">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="person__name">Jackson Vargas</div>
+                    </div>
+                    <div class="settings">
+                        <img src="img/icons/settings.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="sidebar__objects">
+                    <div class="top">
+                        <div class="top__title">Objects</div>
+                        <div class="top__btn btn">add new object</div>
+                    </div>
+                    <ul class="images">
+                        <li class="images__item">
+                            <img src="img/picture_1.png" alt="">
+                        </li>
+                        <li class="images__item">
+                            <img src="img/picture_2.png" alt="">
+                        </li>
+                        <li class="images__item">
+                            <img src="img/picture_2.png" alt="">
+                        </li>
+                        <li class="images__item">
+                            <img src="img/picture_1.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+
+                <a class="btn btn--fill" href="initiate_transaction.html">initiate transaction</a>
+            </aside>
+
+            <div class="info">
+                <div class="top">
+                    <h2 class="title">Object page</h2>
+                    <a class="close" href="home.html">CLOSE</a>
+                </div>
+
+                <div class="middle-wrap">
+                    <ul class="info-list">
+                        <li class="info-list__item">
+                            <div class="key">Object link code</div>
+                            <div class="value">aERX56743ASsgdmklfcGdCBNwE3RQWEF</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="key">Artist</div>
+                            <div class="value">Rembrandt</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="key">Object name</div>
+                            <div class="value">Danae</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="key">Created (year)</div>
+                            <div class="value">1636</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="key">Dimensions</div>
+                            <div class="value">185 X 203</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="key">Artist</div>
+                            <div class="value">Rembrandt</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="key">Object name</div>
+                            <div class="value">Danae</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="key">Created (year)</div>
+                            <div class="value">1636</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="key">Dimensions</div>
+                            <div class="value">185 X 203</div>
+                        </li>
+                    </ul>
+                    <div class="obj-id">
+                        <img class="obj-id__img" src="img/picture_3.png" alt="">
+                        <div class="obj-id__text">View Getty object ID</div>
+                    </div>
+                </div>
+
+                <div class="descr">
+                    <div class="descr__title">Description</div>
+                    <div class="descr__text">It is a life-sized depiction of the character Danaë from Greek mythology, the mother of Perseus. She is presumably depicted as welcoming Zeus, who impregnated her in the form of a shower of gold.</div>
+                </div>
+
+                <div class="btn">Edit object info</div>
+            </div>
+        </div>
+    </section>
+
+	<script src="js/index.js"></script>
+</body>
+</html>

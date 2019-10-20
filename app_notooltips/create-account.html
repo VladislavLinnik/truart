@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- FOR ADAPTIVE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- STYLES -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- ПОДКЛЮЧЕНИЕ JQUERY -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="js/jquery.3.3.1.min.js"></script>
+
+	<title>TruArt</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <div class="header__actions">
+                <div class="notification">
+                    <div class="notification__img">
+                        <img src="img/icons/bell.svg" alt="">
+                    </div>
+                </div>
+                <a href="login.html" class="logout">Log out</a>
+            </div>
+        </div>
+	</header>
+	
+	<div class="info">
+		<div class="info__container container" style="margin-bottom: 30px;">
+			<h1 class="info__title">Create Account</h1>
+			<div class="account">
+				<div class="account__info">
+					<div class="account__avatar">
+						<img class="img" src="img/avatar.png" alt="">
+					</div>
+					<div class="account__edit">
+						<img class="img" src="img/icons/pen.svg" alt="">
+						<span>EDIT</span>
+					</div>
+					<div class="account__status">
+						<span class="text">Your status</span>
+						<div class="status">
+							<div class="posr">
+								<img class="img" src="img/icons/verify.svg" alt="">
+							</div>
+							<span>Verified</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="account__form">
+					<div class="grid">
+						<div class="form-group">
+							<label class="label" for="firstName">First Name</label>
+							<input class="input" id="firstName" type="text" value="Jackson">
+						</div>
+						<div class="form-group">
+							<label class="label" for="lastName">Last Name</label>
+							<input class="input" id="lastName" type="text" value="Vargas">
+						</div>
+						<div class="form-group">
+							<label class="label" for="userame">Username</label>
+							<input class="input" id="userame" type="text" value="jackson.vargas">
+						</div>
+						<div class="form-group">
+							<label class="label" for="email">Email</label>
+							<input class="input" id="email" type="email" value="jackson.vargas@gmail.com">
+						</div>
+						<div class="form-group">
+							<label class="label" for="phoneNumber">Phone number</label>
+							<input class="input" id="phoneNumber" type="text" value="+38 (098) 690 777 9">
+						</div>
+						<div class="form-group">
+							<label class="label" for="yourID">Your ID</label>
+							<input class="input" id="yourID" type="text" value="1012002">
+						</div>
+						<div class="form-group">
+							<label class="label" for="country">Country</label>
+							<select id="country" class="select js-customSelect">
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="label" for="state">State</label>
+							<select id="state" class="select js-customSelect">
+								<option value="UK">-</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="label" for="city">City</label>
+							<select id="city" class="select js-customSelect">
+								<option value="UK">London</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="label" for="city">Address</label>
+							<select id="city" class="select js-customSelect">
+								<option value="UK">130 Gloucester Road</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+								<option value="UK">United Kingdom</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="label" for="postalCode">Postal code</label>
+							<input class="input" id="postalCode" type="text" value="533425">
+						</div>
+						<div class="form-group js-focus1">
+							<label class="label" for="yourWallet">Your wallet</label>
+							<div class="posr">
+								<input class="input" style="width: 100%;" id="yourWallet" type="text" value="0XF234KJEWJ231KW74EQWDC">
+							</div>
+						</div>
+					</div>
+
+					<div class="section-name">Bank Requisites</div>
+					
+					<div class="grid">
+						<div class="form-group">
+							<label class="label" for="accountNumber">Account Number</label>
+							<input class="input" id="accountNumber" type="text" value="7D72069DEF">
+						</div>
+						<div class="form-group">
+							<label class="label" for="iban">IBAN</label>
+							<input class="input" id="iban" type="text" value="GB21736BGSKRNSA">
+						</div>
+					</div>
+					<a href="home.html" class="btn btn--fill account__form-btn posr js-focus2">
+						accept info</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup_overlay"></div>
+
+	<script src="js/index.js"></script>
+</body>
+</html>

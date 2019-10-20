@@ -1,0 +1,91 @@
+.td-status3 {
+
+    .select-styled, .select-options li {
+        text-align: left;
+    }
+
+    .popup1, .popup3 {
+        display: none;
+        position: fixed;
+        z-index: 1100;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        text-align: center;
+        color: #222;
+        box-shadow: 0 7px 30px 0 rgba(0, 0, 0, 0.1);
+        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
+    
+        &_content {
+            padding: 28px 42px 42px 28px;
+            
+            .title {
+                margin-bottom: 26px;
+                color: #121212;
+                text-align: left;
+                font-size: calc(5px + 1.5vw);
+            }
+
+            .row {
+                margin-bottom: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &__text {
+                    @include font-raleway;
+                    margin-right: 20px;
+                    text-align: left;
+                    color: $black;
+                    line-height: 1.4;
+                }
+
+                .btn {
+                    min-width: 150px;
+                }
+            }
+        }
+    }
+
+    .popup2 {
+        display: none;
+        min-width: 400px;
+        position: fixed;
+        z-index: 1100;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        text-align: center;
+        color: #222;
+        box-shadow: 0 7px 30px 0 rgba(0, 0, 0, 0.1);
+        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
+    
+        &_content {
+            padding: 42px;
+            
+            .title {
+                margin-bottom: 26px;
+                color: #121212;
+                text-align: center;
+                font-size: calc(5px + 1.5vw);
+            }
+
+            .form-group {
+                margin-bottom: 25px;
+                display: flex;
+                flex-direction: column;
+                
+                .label {
+                    margin-bottom: 6px;
+                    text-align: left;
+                }
+
+                .input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

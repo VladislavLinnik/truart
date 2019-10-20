@@ -1,0 +1,58 @@
+.transaction-details-views {
+
+    &__container {
+        display: flex;
+
+        .info {
+            flex: 1;
+            color: $black;
+
+            &__heading {
+                margin-bottom: 10px;
+                color: rgba(#121212, .4);
+            }
+            
+            &__inner {
+                flex: 1;
+                box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.06);
+                background-color: #fff;
+                color: $black;
+
+                .grid {
+
+                    &__row {
+                        display: grid;
+                        grid-template-columns: 1.5fr 1fr 1fr 1.4fr 1fr;
+                        border-bottom: solid 1px rgba(#d8d8d8, .3);
+
+                        &--header {
+
+                            .grid__row-cell {
+                                @include font-futura;
+                                color: #121212;
+                                font-size: 18px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        &-cell {
+                            @include font-raleway;
+                            padding: 20px 15px;
+                            font-size: 16px;
+
+                            &:not(:last-child) {
+                                border-right: solid 1px rgba(#d8d8d8, .3);
+                            }
+
+                            &--invite {
+                                @include font-futura;
+                                color: $orange;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -82,7 +82,7 @@
             <div class="info">
                 <div class="info__top">
                     <div class="title">Transaction details</div>
-                    <a href="home_3.html" class="close posr">Close
+                    <a href="home_3.html" class="close posr js-focus1">Close
                         <img class="tooltip tooltip1" style="right: 95%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
                     </a>
                 </div>
@@ -95,7 +95,7 @@
                             </div>
                             <div class="detail">
                                 <div class="key">Object link code</div>
-                                <div class="value posr">aERX56743ASsgdmklfcGdCBNwE3RQWEF
+                                <div class="value posr js-focus2">aERX56743ASsgdmklfcGdCBNwE3RQWEF
                                     <img class="tooltip tooltip2" style="right: 0%;" src="img/icons/circle.svg" data-tippy-content="A globally unique identifier for individual transactions in financial markets." alt="">
                                 </div>
                             </div>
@@ -167,7 +167,7 @@
                             </div>
                         </div>
 
-                        <div class="btn posr">Cancel transaction
+                        <div class="btn posr js-focus3">Cancel transaction
                             <img class="tooltip tooltip3" style="right: 0%;" src="img/icons/circle.svg" data-tippy-content="The process of cancelling a transaction depends on the transaction status. The process is not described by this prototype." alt="">
                         </div>
                     </div>
@@ -183,20 +183,48 @@
         </div>
     </div>
 
+    <div class="popup_overlay"></div>
+
     <script src="https://unpkg.com/popper.js@1"></script>
     <script src="https://unpkg.com/tippy.js@5"></script>
     <script>
     const instance1 = tippy(document.querySelector('.tooltip1'), {
         placement: 'top'
-    }).show();
+    });
 
     const instance2 = tippy(document.querySelector('.tooltip2'), {
         placement: 'right'
-    }).show();
+    });
 
     const instance3 = tippy(document.querySelector('.tooltip3'), {
         placement: 'right'
-    }).show();
+    });
+
+    setTimeout(function(){
+        $('.popup_overlay').fadeIn(400);
+        $('.js-focus1').addClass('focus-element');
+        instance1.show();
+        
+        setTimeout(function(){
+            instance1.hide();
+            instance2.show();
+            $('.js-focus1').removeClass('focus-element');
+            $('.js-focus2').addClass('focus-element');
+
+            setTimeout(function(){
+                instance2.hide();
+                instance3.show();
+                $('.js-focus2').removeClass('focus-element');
+                $('.js-focus3').addClass('focus-element');
+
+                setTimeout(function(){
+                    instance3.hide();
+                    $('.js-focus3').removeClass('focus-element');
+                    $('.popup_overlay').fadeOut(400);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 0);
     </script>
     <script src="js/index.js"></script>
 </body>

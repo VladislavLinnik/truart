@@ -114,7 +114,11 @@ body {
 
 .focus-element {
     position: relative;
-    z-index: 1000;
+    z-index: 1200;
+
+    &.descr {
+        color: #fff;
+    }
 
     .label {
         opacity: 1 !important;
