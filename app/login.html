@@ -61,7 +61,7 @@
 			<img class="tooltip tooltip2" style="right: 20%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration without tooltips" alt="">
 		</a>
 		<a class="not_member posr" href="register.html">Not a member yet? 
-			<img class="tooltip" style="right: -20%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
+			<img class="tooltip tooltip1" style="right: -20%;" src="img/icons/circle.svg" data-tippy-content="Click here to continue the demonstration" alt="">
 		</a>
 	</div>
 
@@ -72,7 +72,7 @@
 	<script src="https://unpkg.com/popper.js@1"></script>
 	<script src="https://unpkg.com/tippy.js@5"></script>
 	<script>
-		const tooltippy1 = document.querySelector('.tooltip');
+		const tooltippy1 = document.querySelector('.tooltip1');
 		const instance1 = tippy(tooltippy1, {
 			placement: 'right'
 		});
@@ -80,13 +80,9 @@
 
 		const tooltippy2 = document.querySelector('.tooltip2');
 		const instance2 = tippy(tooltippy2, {
-			placement: 'right'
+			placement: 'top'
 		});
 		instance2.show();
-
-		document.onclick = function() {
-			instance1.show();
-		}
 	</script>
 	<script src="js/index.js"></script>
 </body>
