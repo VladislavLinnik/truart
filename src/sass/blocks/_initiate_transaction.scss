@@ -65,6 +65,7 @@
             width: 266px;
 
             img {
+                max-height: 140px;
                 width: 100%;
                 display: block;
             }
@@ -91,7 +92,7 @@
             }
 
             &--three {
-                grid-template-columns: repeat(3, 164px);
+                grid-template-columns: repeat(4, 164px);
             }
 
             &--four {
@@ -106,7 +107,7 @@
                     .textarea {
                         @include font-raleway;
                         padding: 10px 18px 10px 10px;
-                        min-height: 90px;
+                        min-height: 100px;
                         width: 100%;
                         color: rgba($black, .6);
                         font-size: 16px;

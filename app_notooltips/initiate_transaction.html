@@ -95,15 +95,15 @@
                         </div>
                         <div class="detail">
                             <div class="key">Artist</div>
-                            <div class="value">Rembrandt</div>
+                            <div class="value">John Doe</div>
                         </div>
                         <div class="detail">
                             <div class="key">Object name</div>
-                            <div class="value">Danae</div>
+                            <div class="value">Abstract composition</div>
                         </div>
                         <div class="detail">
                             <div class="key">Created (year)</div>
-                            <div class="value">1636</div>
+                            <div class="value">2000</div>
                         </div>
                         <div class="detail">
                             <div class="key">Dimensions</div>
@@ -112,7 +112,7 @@
                     </div>
 
                     <div class="tip">
-                        <img src="img/picture_3.png" alt="">
+                        <img src="img/berlin_wall.jpg" alt="">
                         <div class="tip__text">view getty object id</div>
                     </div>
                 </div>
@@ -154,14 +154,25 @@
                         <div class="grid-item">
                             <label for="price" class="label">Price</label>
                             <div class="input-wrap">
-                                <input type="text" class="input" value="15,000,000" id="price">
+                                <input type="text" class="input" value="150 000" id="price">
                             </div>
                         </div>
                         <div class="grid-item">
-                            <label for="honestMoney" class="label">Honest Money (10%)</label>
+                            <label for="honestMoney" class="label">Earnest Money</label>
                             <div class="input-wrap posr js-focus3">
-                                <input type="text" class="input input-info" value="15,000,000" id="honestMoney">
+                                <input type="text" class="input input-info" value="15 000" id="honestMoney">
                                 <img class="icon-info" src="img/icons/info.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <label for="earnestmoney" class="label">Earnest Money</label>
+                            <div class="input-wrap">
+                                <select class="js-customSelect" id="earnestmoney">
+                                    <option>10%</option>
+                                    <option>15%</option>
+                                    <option>20%</option>
+                                    <option>25%</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -216,8 +227,6 @@
                     </div>
                 </div>
 
-                <div class="subtitle">Bank Requisites</div>
-
                 <div class="grid">
                     <div class="grid-item">
                         <label for="deliveryAddress" class="label">Delivery address</label>
@@ -241,9 +250,12 @@
 
                 <div class="grid">
                     <div class="grid--fill-two grid-item grid-item--textarea">
-                        <label for="specialConditions" class="label">Special conditions</label>
+                        <label for="specialConditions" class="label">Package requirements</label>
                         <div class="input-wrap posr js-focus4">
-                            <textarea id="specialConditions" class="textarea">The Artwork must be delivered inspecial case.
+                            <textarea id="specialConditions" class="textarea">
+- cardboard against the painting
+- bubble wrap
+- ship in a mirror box
                             </textarea>
                         </div>
                     </div>
